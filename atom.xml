@@ -6,7 +6,7 @@
   <link href="/hexo/atom.xml" rel="self"/>
   
   <link href="https://guojunqitdsa.github.io/"/>
-  <updated>2019-01-05T01:08:29.882Z</updated>
+  <updated>2019-01-05T01:08:03.444Z</updated>
   <id>https://guojunqitdsa.github.io/</id>
   
   <author>
@@ -15,68 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>123</title>
-    <link href="https://guojunqitdsa.github.io/2019/01/05/123/"/>
-    <id>https://guojunqitdsa.github.io/2019/01/05/123/</id>
-    <published>2019-01-05T00:27:55.713Z</published>
-    <updated>2019-01-05T01:08:29.882Z</updated>
-    
-    <summary type="html">
-    
-      123
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>我是郭俊岐</title>
-    <link href="https://guojunqitdsa.github.io/2019/01/04/1/"/>
-    <id>https://guojunqitdsa.github.io/2019/01/04/1/</id>
-    <published>2019-01-04T06:15:49.000Z</published>
-    <updated>2019-01-04T06:16:29.871Z</updated>
-    
-    <content type="html"><![CDATA[<p>大家好吗</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;大家好吗&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>测试代码</title>
-    <link href="https://guojunqitdsa.github.io/2019/01/04/%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/"/>
-    <id>https://guojunqitdsa.github.io/2019/01/04/测试代码/</id>
-    <published>2019-01-04T06:15:49.000Z</published>
-    <updated>2019-01-05T03:54:09.953Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h1><h2 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span>&#123;</span><br><span class="line">    <span class="comment">//System.out.print("你好");</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="数据库代码"><a href="#数据库代码" class="headerlink" title="数据库代码"></a>数据库代码</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> login <span class="keyword">WHERE</span> loginname = <span class="string">'admin'</span> <span class="keyword">and</span> <span class="comment"># sex = '男'</span></span><br></pre></td></tr></table></figure><h2 id="html代码"><a href="#html代码" class="headerlink" title="html代码"></a>html代码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- &lt;div style="color:red;"&gt;&lt;/div&gt; --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="css代码"><a href="#css代码" class="headerlink" title="css代码"></a>css代码</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="comment">/* background: url("../image/xxx.jpg"); */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="javaScript代码"><a href="#javaScript代码" class="headerlink" title="javaScript代码"></a>javaScript代码</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">10</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"123"</span>);</span><br><span class="line">    <span class="comment">//window.document.write()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll -as</span><br></pre></td></tr></table></figure><h2 id="php代码"><a href="#php代码" class="headerlink" title="php代码"></a>php代码</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">demo</span><span class="params">($a=<span class="number">10</span>,$b=<span class="number">20</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> $a + $b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure><h2 id="yml代码"><a href="#yml代码" class="headerlink" title="yml代码"></a>yml代码</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">public</span></span><br><span class="line"><span class="attr">    admin:</span> <span class="string">admin</span></span><br></pre></td></tr></table></figure><h2 id="xml代码"><a href="#xml代码" class="headerlink" title="xml代码"></a>xml代码</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">person</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">person</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      这仅仅是测试代码
-    
-    </summary>
-    
-      <category term="编程" scheme="https://guojunqitdsa.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="centOS" scheme="https://guojunqitdsa.github.io/tags/centOS/"/>
-    
-      <category term="tomcat" scheme="https://guojunqitdsa.github.io/tags/tomcat/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
