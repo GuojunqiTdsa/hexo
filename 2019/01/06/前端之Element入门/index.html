@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://guojunqitdsa.github.io">
-  <title>Archives | Qiii~的博客</title>
+  <title>前端之Element入门 | Qiii~的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个想记录所有知识点+BUG的小白">
-<meta name="keywords" content="前端,html,css,javascript,jquery,vue,java,spring,mybatis,spring-boot,mysql,radis,程序猿,it">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Qiii~的博客">
-<meta property="og:url" content="https://guojunqitdsa.github.io/archives/index.html">
+  <meta name="description" content="element是一套为开发者、设计师和产品经理准备的级域Vue2.0的桌面端组件库，可以使用vue快速搭建前端">
+<meta name="keywords" content="web,前端,element,后台组件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端之Element入门">
+<meta property="og:url" content="https://guojunqitdsa.github.io/2019/01/06/前端之Element入门/index.html">
 <meta property="og:site_name" content="Qiii~的博客">
-<meta property="og:description" content="一个想记录所有知识点+BUG的小白">
+<meta property="og:description" content="element是一套为开发者、设计师和产品经理准备的级域Vue2.0的桌面端组件库，可以使用vue快速搭建前端">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2019-01-07T01:36:42.144Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Qiii~的博客">
-<meta name="twitter:description" content="一个想记录所有知识点+BUG的小白">
+<meta name="twitter:title" content="前端之Element入门">
+<meta name="twitter:description" content="element是一套为开发者、设计师和产品经理准备的级域Vue2.0的桌面端组件库，可以使用vue快速搭建前端">
   
     <link rel="alternative" href="/atom.xml" title="Qiii~的博客" type="application/atom+xml">
   
@@ -160,36 +161,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-前端之Element入门" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/hexo/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hexo/2019/01/06/前端之Element入门/" class="archive-article-date">
-  	<time datetime="2019-01-06T00:53:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hexo/2019/01/06/前端之Element入门/">前端之Element入门</a>
+    <h1 class="article-title" itemprop="name">
+      前端之Element入门
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/hexo/2019/01/06/前端之Element入门/" class="archive-article-date">
+  	<time datetime="2019-01-06T00:53:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>element是一套为开发者、设计师和产品经理准备的级域Vue2.0的桌面端组件库，可以使用vue快速搭建前端</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="入门安装"><a href="#入门安装" class="headerlink" title="入门安装"></a>入门安装</h1><blockquote>
+<p>前提需求 <code>nodejs</code> <code>npm</code> <code>vue-cli</code></p>
+</blockquote>
+<p>第一步、创建vue项目</p>
+<blockquote>
+<p>可以使用命令创建，也可以使用idea创建</p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建webpack项目</span></span><br><span class="line">vue init wabpack my-project</span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>第二部、在vue项目里安装 <code>element-ui</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i element-ui -S</span><br></pre></td></tr></table></figure>
+<p>第三部、引用，下面详细记录</p>
+<h1 id="引入方式"><a href="#引入方式" class="headerlink" title="引入方式"></a>引入方式</h1><h2 id="方式一、完整引入"><a href="#方式一、完整引入" class="headerlink" title="方式一、完整引入"></a>方式一、完整引入</h2><p>在 <code>main.js</code> 中引入如下内容</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">'element-ui'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="方式二、按需引用"><a href="#方式二、按需引用" class="headerlink" title="方式二、按需引用"></a>方式二、按需引用</h2><p>借助 <code>babel-plugin-component</code><br>，我们可以只引入需要的组建，以达到减小项目体积的目的。<br>首先、安装 <code>babel-plugin-component</code> </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install babel-plugin-component -D</span><br></pre></td></tr></table></figure>
+<p>然后，将 <code>.babelrc</code> 文件修改为</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"presets"</span>: [[<span class="string">"es2015"</span>, &#123; <span class="attr">"modules"</span>: <span class="literal">false</span> &#125;]],</span><br><span class="line">  <span class="attr">"plugins"</span>: [</span><br><span class="line">    [</span><br><span class="line">      <span class="string">"component"</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"libraryName"</span>: <span class="string">"element-ui"</span>,</span><br><span class="line">        <span class="attr">"styleLibraryName"</span>: <span class="string">"theme-chalk"</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果只希望引入部分组件，如： <code>Button</code> 和 <code>Select</code> ，那么在 <code>main.js</code> 中写入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Button, Select &#125; <span class="keyword">from</span> <span class="string">'element-ui'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span>;</span><br><span class="line"></span><br><span class="line">Vue.component(Button.name, Button);</span><br><span class="line">Vue.component(Select.name, Select);</span><br><span class="line"><span class="comment">/* 或写为</span></span><br><span class="line"><span class="comment"> * Vue.use(Button)</span></span><br><span class="line"><span class="comment"> * Vue.use(Select)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>完整组件列表和引入方式以 <a href="https://github.com/ElemeFE/element/blob/master/components.json" target="_blank" rel="noopener">https://github.com/ElemeFE/element/blob/master/components.json</a> 为准</p>
+<p>到此为止 <code>Element-ui</code> 就算是搭建成功了，剩下的就是在 <code>App.vue</code> 中添加组件，开始搭建网站了</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -213,69 +237,68 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hexo/2019/01/04/hello-world/" class="archive-article-date">
-  	<time datetime="2019-01-04T05:42:50.882Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/hexo/2019/01/04/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hexo/2019/01/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">bolg</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#入门安装"><span class="toc-number">1.</span> <span class="toc-text">入门安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#引入方式"><span class="toc-number">2.</span> <span class="toc-text">引入方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#方式一、完整引入"><span class="toc-number">2.1.</span> <span class="toc-text">方式一、完整引入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方式二、按需引用"><span class="toc-number">2.2.</span> <span class="toc-text">方式二、按需引用</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -298,8 +321,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
