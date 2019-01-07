@@ -45,6 +45,30 @@
   </entry>
   
   <entry>
+    <title>javaSE之面向对象</title>
+    <link href="https://guojunqitdsa.github.io/2019/01/05/javaSE%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>https://guojunqitdsa.github.io/2019/01/05/javaSE之面向对象/</id>
+    <published>2019-01-05T09:39:59.000Z</published>
+    <updated>2019-01-07T01:41:20.334Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>博客搭建成功后，总想写点东西，想了半天从何写起<br>就从基础的面向对象写起吧</p></blockquote><a id="more"></a><h1 id="面向对象基础"><a href="#面向对象基础" class="headerlink" title="面向对象基础"></a>面向对象基础</h1><h2 id="成员变量与局部变量"><a href="#成员变量与局部变量" class="headerlink" title="成员变量与局部变量"></a>成员变量与局部变量</h2><ul><li>成员变量就是定义在类内部，方法外，作为类成员存在的变量或属性</li><li>局部变量就是定义在方法内部的变量，在方法外是不可以访问到的</li></ul><h2 id="重载与重写"><a href="#重载与重写" class="headerlink" title="重载与重写"></a>重载与重写</h2><ul><li><code>Overload</code> 重载：在同一个类中，出现方法名相同，参数列表不同的现象</li><li><code>Override</code> 重写：在子类中，出现和父类一模一样的方法声明的现象</li></ul><h2 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h2><h3 id="权限修饰符"><a href="#权限修饰符" class="headerlink" title="权限修饰符"></a>权限修饰符</h3><blockquote><p>权限修饰符可以修饰类，成员方法，成员变量</p></blockquote><ul><li><code>public</code> ：公共的，是java中限制最宽的修饰符，不仅可以跨类访问，还可以跨包访问</li><li><code>protect</code> ：受保护的，被修饰的东西只能被本类和子类访问，<strong>可以跨包访问</strong></li><li><code>default</code> ：默认修饰符，可以不写，只能被本包访问，不论有没有继承关系</li><li><code>private</code> ：私有的，被修饰的东西只能被本类访问</li></ul><h3 id="状态修饰符"><a href="#状态修饰符" class="headerlink" title="状态修饰符"></a>状态修饰符</h3><blockquote><p><code>static</code>修饰符不能修饰类</p></blockquote><ul><li><p><code>static</code> ：静态的，被修饰的东西随着类的加载而加载，所以优先于对象，被所有的对象共享，可以直接通过类名调用，因为有以上特性所以会有如下情况出项</p><ul><li>在静态方法中不存在this关键字</li><li>静态只能访问静态，非静态能访问一切</li></ul></li><li><p><code>final</code> ：最终的，被修饰的东西不可以被改变</p><ul><li>被修饰的类不能被继承</li><li>被修饰的方法不能被重写</li><li>被修饰的变量不能重新赋值，称作自定义常量<ul><li>修饰引用类型，地址不变，内容可以改变</li><li>修饰的变量能且只能赋值一次</li></ul></li></ul></li></ul><h3 id="抽象修饰符"><a href="#抽象修饰符" class="headerlink" title="抽象修饰符"></a>抽象修饰符</h3><blockquote><p>抽象修饰符只有<code>abstract</code>修饰符<br>我们把一个不是具体的功能称为抽象功能，一个类中如果有抽象方法，那么该类必须是抽象类</p></blockquote><h4 id="抽象类特点"><a href="#抽象类特点" class="headerlink" title="抽象类特点"></a>抽象类特点</h4><blockquote><p>抽象方法是没有方法体，不是空方法体<br>抽象类的实例化是靠非抽象子类实现(多态)</p></blockquote><ul><li>抽象类和抽象方法必须用abstract关键字修饰</li><li>抽象类中不一定具有抽象方法，但有抽象方法的类必须定义为抽象类</li><li>抽象类不能实例化，因为不是具体的。抽象类有构造方法，用于子类访问父(抽象)类数据初始化</li><li>抽象类的子类如果不是抽象类，就必须重写所有的抽象方法</li></ul><h4 id="抽象类成员特点"><a href="#抽象类成员特点" class="headerlink" title="抽象类成员特点"></a>抽象类成员特点</h4><ul><li>成员变量：既可以是变量，也可以是常量</li><li>构造方法：用于子类访问父(抽象)类数据的初始化</li><li>成员方法：可以是抽象，也可以是非抽象<ul><li>抽象方法：强制要求子类做的事</li><li>非抽象方法：子类继承，提高代码复用性</li></ul></li></ul><h4 id="抽象使用场景"><a href="#抽象使用场景" class="headerlink" title="抽象使用场景"></a>抽象使用场景</h4><ul><li>抽象类中可以没有抽象方法，意义是不能创建对象，只能用于继承</li><li><code>abstract</code> 不能共存的关键字<ul><li><code>private</code> 冲突</li><li><code>final</code> 冲突</li><li><code>static</code> 无意义</li></ul></li></ul><h2 id="this-amp-amp-super"><a href="#this-amp-amp-super" class="headerlink" title="this &amp;&amp; super"></a>this &amp;&amp; super</h2><ul><li><code>this</code> 代表当前类实例化对象的引用，谁实例化了当前类，<code>this</code>就指向谁</li><li><code>super</code> 代表父类存储空间的表示，可以理解为父类引用</li></ul><h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><blockquote><p>构造方法在实例化对象时自动执行的方法，或者说执行构造方法得到该类的对象</p></blockquote><ul><li>类中默认给出一个无参构造，当重载有参构造时，无参构造会消失，<strong>建议加上无参构造</strong></li><li>因为静态属于类的，在生成对象之前就存在，所以会优先加载所有类的静态代码块</li><li>子类会加载父类的无参构造，如果父类给定有参构造，没有无参构造，默认子类会报错</li><li>子类可以使用<code>super(参数)</code>来调用父类有参构造</li></ul><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><ul><li>局部代码块：在方法内，用于限定变量的生命周期</li><li>构造代码块：类中成员位置，每次调用构造方法前先执行构造代码块，在重载多个构造方法时，可以将共同的代码放在一起</li><li>静态代码块：类中成员位置，用<code>static</code>关键字修饰，实例化时执行一次，一般用于类的初始化</li></ul><blockquote><p><strong>执行顺序</strong><br>父类静态代码块→子类静态代码块→父类构造代码块→父类构造方法→子类构造代码块→子类构造方法</p></blockquote><p>未完待续…</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;博客搭建成功后，总想写点东西，想了半天从何写起&lt;br&gt;就从基础的面向对象写起吧&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="javaSE" scheme="https://guojunqitdsa.github.io/tags/javaSE/"/>
+    
+      <category term="面向对象" scheme="https://guojunqitdsa.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://guojunqitdsa.github.io/2019/01/04/hello-world/"/>
     <id>https://guojunqitdsa.github.io/2019/01/04/hello-world/</id>
