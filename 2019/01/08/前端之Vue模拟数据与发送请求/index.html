@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://guojunqitdsa.github.io">
   <title>前端之Vue模拟数据与发送请求 | Qiii~的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="生成模拟数据首先需要有一个data.json 的数据文件，里面一般是模拟数据，放在vue项目的根目录里 然后在wabpack.dev.conf.js 文件中头部位置加入以下代码 12345678const express = require(&apos;express&apos;)const app = express()var appData = require(&apos;json文件位置&apos;)var 跟节点变量 = app">
+  <meta name="description" content="模拟数据与发送请求这块是凭着记忆思路写的可能会有bug">
 <meta name="keywords" content="前端,vue,vue-resource,express">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端之Vue模拟数据与发送请求">
 <meta property="og:url" content="https://guojunqitdsa.github.io/2019/01/08/前端之Vue模拟数据与发送请求/index.html">
 <meta property="og:site_name" content="Qiii~的博客">
-<meta property="og:description" content="生成模拟数据首先需要有一个data.json 的数据文件，里面一般是模拟数据，放在vue项目的根目录里 然后在wabpack.dev.conf.js 文件中头部位置加入以下代码 12345678const express = require(&apos;express&apos;)const app = express()var appData = require(&apos;json文件位置&apos;)var 跟节点变量 = app">
+<meta property="og:description" content="模拟数据与发送请求这块是凭着记忆思路写的可能会有bug">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-01-08T01:59:38.593Z">
+<meta property="og:updated_time" content="2019-01-08T02:22:37.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端之Vue模拟数据与发送请求">
-<meta name="twitter:description" content="生成模拟数据首先需要有一个data.json 的数据文件，里面一般是模拟数据，放在vue项目的根目录里 然后在wabpack.dev.conf.js 文件中头部位置加入以下代码 12345678const express = require(&apos;express&apos;)const app = express()var appData = require(&apos;json文件位置&apos;)var 跟节点变量 = app">
+<meta name="twitter:description" content="模拟数据与发送请求这块是凭着记忆思路写的可能会有bug">
   
     <link rel="alternative" href="/atom.xml" title="Qiii~的博客" type="application/atom+xml">
   
@@ -181,7 +181,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="生成模拟数据"><a href="#生成模拟数据" class="headerlink" title="生成模拟数据"></a>生成模拟数据</h1><p>首先需要有一个<code>data.json</code> 的数据文件，里面一般是模拟数据，放在vue项目的根目录里</p>
+        <blockquote>
+<p>模拟数据与发送请求这块是凭着记忆思路写的可能会有bug</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="生成模拟数据"><a href="#生成模拟数据" class="headerlink" title="生成模拟数据"></a>生成模拟数据</h1><p>首先需要有一个<code>data.json</code> 的数据文件，里面一般是模拟数据，放在vue项目的根目录里</p>
 <p>然后在<code>wabpack.dev.conf.js</code> 文件中头部位置加入以下代码</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> appData = <span class="built_in">require</span>(<span class="string">'json文件位置'</span>)</span><br><span class="line"><span class="keyword">var</span> 跟节点变量 = appData.跟节点</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> apiRoutes = express.Router()</span><br><span class="line">app.user(<span class="string">'/api'</span>, apiRoutes)</span><br></pre></td></tr></table></figure>
 <p>然后在当前文件下 <code>devServer</code> 对象最后加上</p>
