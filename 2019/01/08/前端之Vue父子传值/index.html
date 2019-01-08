@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://guojunqitdsa.github.io">
-  <title>Tag: 面向对象 | Qiii~的博客</title>
+  <title>前端之Vue父子传值 | Qiii~的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个想记录所有知识点+BUG的小白">
-<meta name="keywords" content="前端,html,css,javascript,jquery,vue,java,spring,mybatis,spring-boot,mysql,radis,程序猿,it">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Qiii~的博客">
-<meta property="og:url" content="https://guojunqitdsa.github.io/tags/面向对象/index.html">
+  <meta name="description" content="父模块 father.vue ，子模块 son.vue 父传子1234567891011121314151617//father.vue&amp;lt;template&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;div&amp;gt;父元素&amp;lt;/div&amp;gt;        &amp;lt;son :fatherContent=&quot;fValue&quot;&amp;gt;&amp;lt;/son&amp;gt;    &amp;lt;/div">
+<meta name="keywords" content="前端,vue,父子传值">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端之Vue父子传值">
+<meta property="og:url" content="https://guojunqitdsa.github.io/2019/01/08/前端之Vue父子传值/index.html">
 <meta property="og:site_name" content="Qiii~的博客">
-<meta property="og:description" content="一个想记录所有知识点+BUG的小白">
+<meta property="og:description" content="父模块 father.vue ，子模块 son.vue 父传子1234567891011121314151617//father.vue&amp;lt;template&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;div&amp;gt;父元素&amp;lt;/div&amp;gt;        &amp;lt;son :fatherContent=&quot;fValue&quot;&amp;gt;&amp;lt;/son&amp;gt;    &amp;lt;/div">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2019-01-08T02:18:53.040Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Qiii~的博客">
-<meta name="twitter:description" content="一个想记录所有知识点+BUG的小白">
+<meta name="twitter:title" content="前端之Vue父子传值">
+<meta name="twitter:description" content="父模块 father.vue ，子模块 son.vue 父传子1234567891011121314151617//father.vue&amp;lt;template&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;div&amp;gt;父元素&amp;lt;/div&amp;gt;        &amp;lt;son :fatherContent=&quot;fValue&quot;&amp;gt;&amp;lt;/son&amp;gt;    &amp;lt;/div">
   
     <link rel="alternative" href="/atom.xml" title="Qiii~的博客" type="application/atom+xml">
   
@@ -160,64 +161,121 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-前端之Vue父子传值" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/hexo/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hexo/2019/01/05/javaSE之面向对象/" class="archive-article-date">
-  	<time datetime="2019-01-05T09:39:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hexo/2019/01/05/javaSE之面向对象/">javaSE之面向对象</a>
+    <h1 class="article-title" itemprop="name">
+      前端之Vue父子传值
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/hexo/2019/01/08/前端之Vue父子传值/" class="archive-article-date">
+  	<time datetime="2019-01-08T02:00:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>父模块 <code>father.vue</code> ，子模块 <code>son.vue</code></p>
+<h1 id="父传子"><a href="#父传子" class="headerlink" title="父传子"></a>父传子</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//father.vue</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;div&gt;父元素&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;son :fatherContent="fValue"&gt;&lt;/</span>son&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">import</span> Son <span class="keyword">from</span> <span class="string">'./son'</span></span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">        data () &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                fValue: <span class="string">'父数据'</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//son.vue</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;div&gt;子元素&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;&#123;&#123;fatherContent&#125;&#125;&lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">        props: &#123;</span><br><span class="line">           fatherContent: &#123;</span><br><span class="line">               type: <span class="built_in">String</span></span><br><span class="line">           &#125; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>#子传父</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//father.vue</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;div&gt;父元素&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;son v-on:sonContent="sonContent"&gt;&lt;/</span>son&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">import</span> Son <span class="keyword">from</span> <span class="string">'./son'</span></span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">        methods: &#123;</span><br><span class="line">            sonContent (sonContent) &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(sonContent)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;div&gt;子元素&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;button @click="send"&gt;传值&lt;/</span>button&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">        methods: &#123;</span><br><span class="line">            send () &#123;</span><br><span class="line">                <span class="keyword">this</span>.$emit(<span class="string">'sonContent'</span>,<span class="string">'子元素的值'</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">javaSE</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">父子传值</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/hexo/2019/01/08/前端之Vue模拟数据与发送请求/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端之Vue模拟数据与发送请求</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#父传子"><span class="toc-number">1.</span> <span class="toc-text">父传子</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -240,9 +298,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: false,

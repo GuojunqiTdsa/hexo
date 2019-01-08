@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://guojunqitdsa.github.io">
-  <title>Tag: 面向对象 | Qiii~的博客</title>
+  <title>前端之Vue模拟数据与发送请求 | Qiii~的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个想记录所有知识点+BUG的小白">
-<meta name="keywords" content="前端,html,css,javascript,jquery,vue,java,spring,mybatis,spring-boot,mysql,radis,程序猿,it">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Qiii~的博客">
-<meta property="og:url" content="https://guojunqitdsa.github.io/tags/面向对象/index.html">
+  <meta name="description" content="生成模拟数据首先需要有一个data.json 的数据文件，里面一般是模拟数据，放在vue项目的根目录里 然后在wabpack.dev.conf.js 文件中头部位置加入以下代码 12345678const express = require(&apos;express&apos;)const app = express()var appData = require(&apos;json文件位置&apos;)var 跟节点变量 = app">
+<meta name="keywords" content="前端,vue,vue-resource,express">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端之Vue模拟数据与发送请求">
+<meta property="og:url" content="https://guojunqitdsa.github.io/2019/01/08/前端之Vue模拟数据与发送请求/index.html">
 <meta property="og:site_name" content="Qiii~的博客">
-<meta property="og:description" content="一个想记录所有知识点+BUG的小白">
+<meta property="og:description" content="生成模拟数据首先需要有一个data.json 的数据文件，里面一般是模拟数据，放在vue项目的根目录里 然后在wabpack.dev.conf.js 文件中头部位置加入以下代码 12345678const express = require(&apos;express&apos;)const app = express()var appData = require(&apos;json文件位置&apos;)var 跟节点变量 = app">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2019-01-08T01:59:38.593Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Qiii~的博客">
-<meta name="twitter:description" content="一个想记录所有知识点+BUG的小白">
+<meta name="twitter:title" content="前端之Vue模拟数据与发送请求">
+<meta name="twitter:description" content="生成模拟数据首先需要有一个data.json 的数据文件，里面一般是模拟数据，放在vue项目的根目录里 然后在wabpack.dev.conf.js 文件中头部位置加入以下代码 12345678const express = require(&apos;express&apos;)const app = express()var appData = require(&apos;json文件位置&apos;)var 跟节点变量 = app">
   
     <link rel="alternative" href="/atom.xml" title="Qiii~的博客" type="application/atom+xml">
   
@@ -160,64 +161,142 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-前端之Vue模拟数据与发送请求" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/hexo/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hexo/2019/01/05/javaSE之面向对象/" class="archive-article-date">
-  	<time datetime="2019-01-05T09:39:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hexo/2019/01/05/javaSE之面向对象/">javaSE之面向对象</a>
+    <h1 class="article-title" itemprop="name">
+      前端之Vue模拟数据与发送请求
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/hexo/2019/01/08/前端之Vue模拟数据与发送请求/" class="archive-article-date">
+  	<time datetime="2019-01-08T01:18:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="生成模拟数据"><a href="#生成模拟数据" class="headerlink" title="生成模拟数据"></a>生成模拟数据</h1><p>首先需要有一个<code>data.json</code> 的数据文件，里面一般是模拟数据，放在vue项目的根目录里</p>
+<p>然后在<code>wabpack.dev.conf.js</code> 文件中头部位置加入以下代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> appData = <span class="built_in">require</span>(<span class="string">'json文件位置'</span>)</span><br><span class="line"><span class="keyword">var</span> 跟节点变量 = appData.跟节点</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> apiRoutes = express.Router()</span><br><span class="line">app.user(<span class="string">'/api'</span>, apiRoutes)</span><br></pre></td></tr></table></figure>
+<p>然后在当前文件下 <code>devServer</code> 对象最后加上</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">before (app) &#123;</span><br><span class="line">    app.get(<span class="string">'/api/路径'</span>, (req, res) =&gt; &#123;</span><br><span class="line">        res.json(&#123;</span><br><span class="line">            error: <span class="number">0</span>,</span><br><span class="line">            data: 跟节点变量[属性]</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就可以在浏览器中访问 <code>http://ip地址:端口号/api/路径</code> 就可以访问到对应的模拟数据</p>
+<h1 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h1><p>vue发送请求需要使用到 <code>vueresource</code></p>
+<p>在 <code>main.js</code> 中引入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> VueResource <span class="keyword">from</span> <span class="string">'vue-resource'</span></span><br><span class="line">Vue.use(VueResource)</span><br></pre></td></tr></table></figure>
+<p>在想获取数据的模块中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    created () &#123;</span><br><span class="line">        <span class="keyword">this</span>.$http.get(<span class="string">'获取路径'</span>).then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(response)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意修改配置文件时候需要重启<code>nodejs</code>的服务</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">javaSE</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">vue-resource</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">express</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/hexo/2019/01/08/前端之Vue父子传值/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          前端之Vue父子传值
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/hexo/2019/01/08/前端之Element布局/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端之Element布局</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#生成模拟数据"><span class="toc-number">1.</span> <span class="toc-text">生成模拟数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#发送请求"><span class="toc-number">2.</span> <span class="toc-text">发送请求</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -240,9 +319,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: false,
